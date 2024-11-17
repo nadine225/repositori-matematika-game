@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Math Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cover Page -->
+    <div id="cover-page">
+        <h1>Simple Math Game</h1>
+        <button onclick="showLogin()">Start Game</button>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="hidden">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Game Page -->
+    <div id="game-page" class="hidden">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <p>Score: <span id="score">0</span></p>
+        <p id="question"></p>
+        <input type="number" id="answer" placeholder="Your answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <button onclick="endGame()">Finish Game</button>
+    </div>
+
+    <!-- History Page -->
+    <div id="history-page" class="hidden">
+        <h2>Score History</h2>
+        <ul id="history-list"></ul>
+        <button onclick="backToMenu()">Back to Main Menu</button>
+    </div>
+
+    <!-- Game Over Page -->
+    <div id="game-over-page" class="hidden">
+        <h2>Game Over!</h2>
+        <p>Your Score: <span id="final-score"></span></p>
+        <button onclick="showHistory()">View History</button>
+        <button onclick="backToMenu()">Back to Main Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
